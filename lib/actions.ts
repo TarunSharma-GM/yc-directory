@@ -34,7 +34,6 @@ export const creatPitch = async (state:any, form: FormData, pitch: string) => {
         const result = await writeClient.create({_type:"startup", ...startup})
         return parseServerActionsResponse({...result, error:"",status:"SUCCESS"})
     } catch (error) {
-        console.log(error);
         return parseServerActionsResponse({error:JSON.stringify(error),status:"ERROR"})
     }
 }

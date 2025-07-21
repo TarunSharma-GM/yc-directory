@@ -29,9 +29,9 @@ const StartupForm = () => {
                 pitch,
             }
             await formSchema.parseAsync(formValues);
-            console.log(formValues);
+            // console.log(formValues);
             const result = await creatPitch(prevState, formData, pitch)
-            console.log(result)
+            // console.log(result)
             if(result.status == "SUCCESS") {
               toast.success("Success",{description:"Your startup pitch has been created successfully"})
               router.push(`/startup/${result._id}`)

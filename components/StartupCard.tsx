@@ -12,8 +12,8 @@ const StartupCard = ({post} :{post: StartupTypeCard}) => {
     const {_createdAt, views, author, title, category, _id, description, image} = post;
   return (
     <li className="startup-card group">
-        <div className="div flex-between">
-            <p className="p startup_card_date">
+        <div className="flex-between">
+            <p className="startup_card_date">
                 {formatDate(_createdAt)}
             </p>
             <div className="flex gap-1.5">
